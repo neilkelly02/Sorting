@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualiser</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 id="heading"><a id="a" href="https://en.wikipedia.org/wiki/Sorting_algorithm"  > <div class="bounce"><span class="letter">S</span><span class="letter">o</span><span class="letter">r</span><span class="letter">t</span><span class="letter">e</span><span class="letter">r</span>
+    </div></a></h1>
+    
+    <div id="drawing">
+        <canvas id="myCanvas" width="640" height="260"></canvas>
+    </div>
+    <body onload="initialArray()"></body>
+    <div class="buttons">
+        <select id = "SortMethod">
+            <option value = "B">Bubble</option>
+            <option value = "Q" >Quick</option>
+            <option value = "S" >Selection</option>
+            <option value = "I" >Insertion</option>
+            <option value = "M" >Merge</option>
+        </select>
+        <button onclick = "generateArray()" id="button" name="button">
+            New
+        </button>
+        <button onclick = "sortArray()" id="button" name="button" >
+            Sort
+        </button>
+        <button onclick = "window.location.reload()";   id="button" name="button">
+            Clear
+        </button>
+    </div>
+    <div class="slidecontainer">
+       <span>Number</span> <input type="range" value="50" min="0" max="100" class="slider" id="numberSlider">
+       <span>Gap</span> <input type="range" value="0" min="0" max="20" class="slider" id="gapSlider">
+       <span>Delay</span> <input type="range" value="0" min="0" max="1000" class="slider" id="delaySlider">
+    </div>
+    <div class="themediv" >
+        <form onclick="checkTheme(),updateArray()">
+            <input type="radio" id="color" value="RB"  name="theme"checked="checked" >
+            <label for="RB">Rainbow</label>
+            <input type="radio" id="color" value="OS"  name="theme" >
+            <label for="OS">Ocean Spray</label>
+            <input type="radio" id="color" value="CC"  name="theme"  >
+            <label for="CC">Cotton Candy</label>
+            <input type="radio" id="color" value="DS"  name="theme" >
+            <label for="DS">Desert Sunrise</label>
+            <input type="radio" id="color" value="GA"  name="theme" >
+            <label for="GA">Green Apple</label>
+            <input type="radio" id="color" value="PI"  name="theme" >
+            <label for="PI">Purple Iris</label>
+        </form>
+    </div> 
+    <script src="app.js"></script>
+</body>
+</html>
